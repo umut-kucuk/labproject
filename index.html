@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+	
+	
+	
+
+    <title>The Journey of the Coffee</title>
+	      <!--Imports a model-viewer JavaScript code -->
+    <!--It helps to handle how the 3D Object would be displayed -->
+	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+	<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+
+	<style>
+	
+
+	header {
+		position: static;
+		width: 100%;
+		top: 0;
+		left: 0;
+		background-color: black;
+		text-align: center;
+	}
+
+	h1 {
+		padding:2px 60px;
+		text-align: center;
+		color: white;
+	}
+
+	div#content {
+	  padding: 90px;
+	  text-align: justify;
+  	  text-justify: inter-word;
+	}
+
+
+	div#Conclusion {
+	   text-align: justify;
+  	   text-justify: inter-word;
+	   padding: 90px;
+
+	}
+
+	html {
+		scroll-padding-top: 120px;
+	} 
+
+	#project_beg {
+		background-color:none;
+		padding: 20px !important;
+	}	
+	
+	figcaption {
+		font-size: small;
+	}
+		
+	a {
+		color: gray;
+	}
+
+	</style>
+  </head>
+  <body>
+	
+    <header>
+    	<h1>The Journey of the Coffee </h1>
+	</header>
+
+	<div id="content">
+		<div id="project_beg" class="container">
+			<h4 id="prototype">A brief history of the coffee</h4>
+				<p id="intro">"The earliest credible evidence of coffee-drinking or knowledge of the coffee tree appears in the middle of the 15th century in the accounts of Ahmed al-Ghaffar in Yemen." The Yemenis began to cultivate coffee beans by obtaining them from Ethiopia. "By the 16th century, the drink had reached the rest of the Middle East and North Africa, later spreading to Europe." Coffee has spread all over the world and has become one of the most popular beverages. Today, coffee continues to be consumed in different ways with hundreds of different types and continues to exist as an important trade item in almost every country of the world with a serious market volume.</p>
+				
+				<h5>Why Coffee?</h5>
+					<p>The truth behind the choice of the coffee as the theme of the project is the issue of resource limitations. In order to demonstrate the ability of exploiting the technologies that have been discussed and practiced during the courses a main theme has been defined and a moka pot was chosen for the 3D design.</p>
+				<h5>Scope and the Process</h5>
+					<p>This project has been implemented as a toy project in which the use of technologies learned in lessons is demonstrated with examples. It could be developed in the future as part of a larger fun-learning project. The main project imagined in this context would be: A digital environment that shows and edutains the domestic user who is interested in coffee, about the entire process of coffee (from cultivation to consumption) with 3D objects and environment.
+						In this created virtual environment, a wide range of information can be transferred to the users, from the cultivation of coffee to its processing, from its storage to its transportation to the end user, and to different preparation methods, with an entertaining educational method.</p>
+				<div class="row">
+					<div class="col">
+						<p><b>Photogrametry by Zephyr 2D to 3D</b><p>
+							<p>Zephyr is a program for performing photogrammetry. It is used for creating 3D objects from the images. 3DF Zephyr allows you to reconstruct 3D models from photos automatically. There are three main phases in Zephyr:</p>
+								<ol>
+									<li>Starting a new project and defining the camera pose - this is also referred as
+										'Structure from Motion'</li>
+									<li>Generating 3D model: Extracting a Dense Point Cloud, Extracting a Surface</li>
+									<li>Extracting a Textured Mesh</li>
+								  </ol>
+							<p>Extracting a Textured Mesh When starting a new project the software will extract the camera external parameters (positions and orientations) and their internal parameters (i.e. the focal length and other camera properties).</p>
+						</div>
+					<div class="col">
+						<figure>
+							<img id="img" src="assets/IMG_20210629_120721.jpg" width="520" height="360"> 
+						</figure>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<p><b>Photogrametry by Zephyr 3D Model</b><p>
+							<p>After the cameras have been oriented, you can proceed and generate the 3d model. This step goes through two phases : - Extract a dense reconstruction. The process requires the input cameras to be correct. If you believe a camera is not correctly oriented, you can remove it from the workspace. Before proceeding you can also restrict or expand the volume of reconstruction. The densification stage is managed by Stasia, our Multi-View Stereo technology, powers the reconstruction process. You can create different dense reconstructions (with varying parameters) and save them into the workspace. - Create a triangular mesh, starting from a dense reconstruction. Based on what you are going to reconstruct you can choose from either the generation of a smoothed surface (when dealing with human body or terrains for instance) or the generation of a sharp surface that more benefits scenes such as buildings or mechanical parts. The latter kind of surfaces are handled by Sasha, the meshing algorithm developed by 3Dflow. Every mesh polygon gets textured using the most appropriate pictures according to their visibility and quality. Within the texture generation phase there is a color balance algorithm as well, that allows the user to select and set-up the best color for each pixel automatically by checking the different lighting changes on the photos.</p> 
+						</div>
+					<div class="col">
+						<style>
+							model-viewer {
+							  border: burlywood;
+							  width: 600px;
+							  height: 600px;
+							}
+						</style>
+						<model-viewer src="assets/second/firstTry.glb" alt="Moka Pot" auto-rotate camera-controls ar ios-src="assets/second/firstTry.glb"></model-viewer>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<p><b>3D Modelling by Blender</b><p>
+							<p>Blender is a free and open-source 3D computer graphics software toolset used for creating animated films, visual effects, art, 3D printed models, motion graphics, interactive 3D applications, virtual reality, and computer games. Blender's features include 3D modeling, UV unwrapping, texturing, raster graphics editing, rigging and skinning, fluid and smoke simulation, particle simulation, soft body simulation, sculpting, animating, match moving, rendering, motion graphics, video editing, and compositing. </p> 
+						</div>
+					<div class="col">
+						<style>
+							model-viewer {
+							  border: burlywood;
+							  width: 800px;
+							  height: 800px;
+							}
+						</style>
+						<model-viewer src="assets/aaaaa6.gltf" alt="Moka Pot" auto-rotate camera-controls ar ios-src="assets/aaaaa6.gltf"></model-viewer>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<p><b>Rendered Image by Blender</b><p>
+							<p>Internal render engine with scanline rendering, indirect lighting, and ambient occlusion that can export in a wide variety of formats; A path tracer render engine called Cycles, which can take advantage of the GPU for rendering. Cycles supports the Open Shading Language since Blender 2.65. Cycles Hybrid Rendering is possible in Version 2.92 with Optix. Tiles are calculated with GPU in combination with cpu. EEVEE is a new physically based real-time renderer. It works both as a renderer for final frames, and as the engine driving Blender's realtime viewport for creating assets.</p> 
+						</div>
+					<div class="col">
+						<img src="assets/firstRenderNovembre.jpg" alt="Rendered Image of Moka Pot" width="960" height="540">
+					</div>
+				</div>
+				<br><br><br>	
+					
+					
+				<div class="row">
+					<div class="col">
+					  <p><b> A Coffee Pot</b><p>
+					  <p>Access to image-based resources is fundamental to research, scholarship and the transmission of cultural knowledge. Digital images are a container for much of the information content in the Web-based delivery of images, books, newspapers, manuscripts, maps, scrolls, single sheet collections, and archival materials. Yet much of the Internet’s image-based resources are locked up in silos, with access restricted to bespoke, locally built applications. A growing community of the world’s leading research libraries and image repositories have embarked on an effort to collaboratively produce an interoperable technology and community framework for image delivery.</p> 
+					</div>
+					<div class="col">
+						<figure>
+							<img id="img" src="https://ids.lib.harvard.edu/ids/iiif/17825696/full/,400/0/default.jpg"> 
+							<figcaption><a href="	https://ids.lib.harvard.edu/ids/iiif/17825696/full/full/0/default.jpg">Title: Coffee Pot on Lampstand, 
+								Author: Folkingham Thomas, Description: Coffee Pot: Of tapering cylindrical form on cast spreading base, with wood scroll handle and tapering swan-neck spout with hinged cap; the hinged domed cover with baluster finial; the side engraved with a lozenge of arms within a circular foliate scroll cartouche, the base with scratch weight 15 18 Lampstand: Of circular form raised on three baluster feet with wood pads and with turned wood side handle; the fixed circular lamp with removable cover with molded band and hinged domed cap; with removable triangular platform.
+								Materials/Techniques: Silver</a></figcaption>
+						</figure>
+					</div>
+				  </div>
+
+				  <br><br><br>
+
+				  <div class="row">
+					<div class="col">
+					  <p><b> Coffee Urn</b><p>
+					  <p>IIIF (International Image Interoperability Framework) has the following goals:</p>
+					  <ul>
+						<li>To give scholars an unprecedented level of uniform and rich access to image-based resources hosted around the world.</li>
+						<li>To define a set of common application programming interfaces that support interoperability between image repositories.</li>
+						<li>To develop, cultivate and document shared technologies, such as image servers and web clients, that provide a world-class user experience in viewing, comparing, manipulating and annotating images.</li>
+					  </ul>
+					</div>
+					<div class="col">
+						<figure>
+							<img id="img" src="	https://ids.lib.harvard.edu/ids/iiif/18791549/full/,600/0/default.jpg">
+							<figcaption><a href="	https://ids.lib.harvard.edu/ids/iiif/18791549/full/full/0/default.jpg">Title: Coffee Urn, 1923/24 [designer: Wilhelm Wagenfeld], Author: 
+								Moholy, Lucia Schulz, Description: 
+								Materials/Techniques: Gelatin silver print
+								Dimensions: image: 17.8 x 12.7 cm (7 x 5 in.)</a></figcaption>
+						</figure>
+					</div>
+				  </div>			  												  
+		</div>
+		
+		<div class="container" id="Conclusion">
+			<h4>Conclusion</h4>
+			<p>This project was prepared by using Zephyr, Blender and IIIF technologies in order to exemplify the topics covered in the course. The project has been published on github as a single page html.</p>
+			<p>This project is a non-commercial work which it was created by Umut Kucuk for the final exam of the Laboratory course, coordinated by Professor Francesca Tomasi. The content is licensed under CC BY-NC 4.0</p> 	
+		</div>
+	</div>	
+</body>
+    
+
+	
